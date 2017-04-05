@@ -1,0 +1,68 @@
+Writing PID to tmp/pids/thin.pid
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:3030, CTRL+C to stop
+[33mFor the twitter widget to work, you need to put in your twitter API keys in the jobs/twitter.rb file.[0m
+160.39.140.166 - - [28/Mar/2017 23:24:15] "GET /events HTTP/1.1" 200 - 2.0898
+160.39.140.166 - - [28/Mar/2017 23:24:16] "GET /sample HTTP/1.1" 200 2339 0.0035
+160.39.140.166 - - [28/Mar/2017 23:24:18] "GET /views/text.html HTTP/1.1" 200 175 0.0022
+160.39.140.166 - - [28/Mar/2017 23:24:18] "GET /views/meter.html HTTP/1.1" 200 442 0.0012
+160.39.140.166 - - [28/Mar/2017 23:24:18] "GET /views/list.html HTTP/1.1" 200 493 0.0007
+160.39.140.166 - - [28/Mar/2017 23:24:18] "GET /views/number.html HTTP/1.1" 200 343 0.0012
+160.39.140.166 - - [28/Mar/2017 23:24:18] "GET /views/graph.html HTTP/1.1" 200 183 0.0015
+160.39.140.166 - - [28/Mar/2017 23:24:35] "GET /events HTTP/1.1" 200 - 16.7978
+Waiting for 5 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!
+Writing PID to tmp/pids/thin.pid
+Thin web server (v1.6.4 codename Gob Bluth)
+Maximum connections set to 1024
+Listening on 0.0.0.0:3030, CTRL+C to stop
+[33mFor the twitter widget to work, you need to put in your twitter API keys in the jobs/twitter.rb file.[0m
+160.39.140.230 - - [04/Apr/2017 20:51:12] "GET /events HTTP/1.1" 200 - 3.3528
+160.39.140.230 - - [04/Apr/2017 20:51:12] "GET /sample HTTP/1.1" 200 2284 0.0044
+160.39.140.230 - - [04/Apr/2017 20:51:15] "GET /views/text.html HTTP/1.1" 200 175 0.0015
+160.39.140.230 - - [04/Apr/2017 20:51:15] "GET /views/doughnut_chart.html HTTP/1.1" 200 147 0.0019
+160.39.140.230 - - [04/Apr/2017 20:51:15] "GET /views/list.html HTTP/1.1" 200 493 0.0017
+160.39.140.230 - - [04/Apr/2017 20:51:15] "GET /views/number.html HTTP/1.1" 200 343 0.0016
+160.39.140.230 - - [04/Apr/2017 20:51:16] "GET /views/graph.html HTTP/1.1" 200 183 0.0015
+160.39.140.230 - - [04/Apr/2017 20:51:17] "GET /events HTTP/1.1" 200 - 1.6303
+160.39.140.230 - - [04/Apr/2017 20:51:17] "GET /sample HTTP/1.1" 200 2284 0.0049
+160.39.140.230 - - [04/Apr/2017 20:51:17] "GET /views/text.html HTTP/1.1" 200 175 0.0015
+160.39.140.230 - - [04/Apr/2017 20:51:17] "GET /views/doughnut_chart.html HTTP/1.1" 200 147 0.0012
+160.39.140.230 - - [04/Apr/2017 20:51:17] "GET /views/list.html HTTP/1.1" 200 493 0.0015
+160.39.140.230 - - [04/Apr/2017 20:51:17] "GET /views/number.html HTTP/1.1" 200 343 0.0014
+160.39.140.230 - - [04/Apr/2017 20:51:17] "GET /views/graph.html HTTP/1.1" 200 183 0.0011
+160.39.140.230 - - [04/Apr/2017 20:51:36] "GET /events HTTP/1.1" 200 - 26.9370
+160.39.140.230 - - [04/Apr/2017 20:51:36] "GET /sampletv HTTP/1.1" 200 3597 0.0033
+160.39.140.230 - - [04/Apr/2017 20:51:36] "GET /views/clock.html HTTP/1.1" 200 53 0.0012
+160.39.140.230 - - [04/Apr/2017 20:51:36] "GET /views/graph.html HTTP/1.1" 200 183 0.0010
+160.39.140.230 - - [04/Apr/2017 20:51:36] "GET /views/doughnut_chart.html HTTP/1.1" 200 147 0.0008
+160.39.140.230 - - [04/Apr/2017 20:51:36] "GET /views/text.html HTTP/1.1" 200 175 0.0009
+160.39.140.230 - - [04/Apr/2017 20:51:36] "GET /views/meter.html HTTP/1.1" 200 442 0.0005
+160.39.140.230 - - [04/Apr/2017 20:51:36] "GET /views/list.html HTTP/1.1" 200 493 0.0010
+160.39.140.230 - - [04/Apr/2017 20:51:36] "GET /views/number.html HTTP/1.1" 200 343 0.0012
+160.39.140.230 - - [04/Apr/2017 20:51:36] "GET /views/comments.html HTTP/1.1" 200 289 0.0009
+160.39.140.230 - - [04/Apr/2017 20:52:30] "GET /events HTTP/1.1" 200 - 54.1630
+160.39.140.230 - - [04/Apr/2017 20:52:30] "GET /sampletv HTTP/1.1" 200 3597 0.0037
+160.39.140.230 - - [04/Apr/2017 20:52:31] "GET /views/clock.html HTTP/1.1" 200 53 0.0010
+160.39.140.230 - - [04/Apr/2017 20:52:31] "GET /views/doughnut_chart.html HTTP/1.1" 200 147 0.0010
+160.39.140.230 - - [04/Apr/2017 20:52:31] "GET /views/text.html HTTP/1.1" 200 175 0.0008
+160.39.140.230 - - [04/Apr/2017 20:52:31] "GET /views/meter.html HTTP/1.1" 200 442 0.0008
+160.39.140.230 - - [04/Apr/2017 20:52:31] "GET /views/graph.html HTTP/1.1" 200 183 0.0010
+160.39.140.230 - - [04/Apr/2017 20:52:31] "GET /views/comments.html HTTP/1.1" 200 289 0.0010
+160.39.140.230 - - [04/Apr/2017 20:52:31] "GET /views/list.html HTTP/1.1" 200 493 0.0010
+160.39.140.230 - - [04/Apr/2017 20:52:31] "GET /views/number.html HTTP/1.1" 200 343 0.0011
+160.39.140.230 - - [04/Apr/2017 20:52:32] "GET /events HTTP/1.1" 200 - 1.2742
+160.39.140.230 - - [04/Apr/2017 20:52:32] "GET /sampletv HTTP/1.1" 200 3597 0.0040
+160.39.140.230 - - [04/Apr/2017 20:52:32] "GET /views/clock.html HTTP/1.1" 200 53 0.0014
+160.39.140.230 - - [04/Apr/2017 20:52:32] "GET /views/doughnut_chart.html HTTP/1.1" 200 147 0.0010
+160.39.140.230 - - [04/Apr/2017 20:52:32] "GET /views/graph.html HTTP/1.1" 200 183 0.0009
+160.39.140.230 - - [04/Apr/2017 20:52:32] "GET /views/comments.html HTTP/1.1" 200 289 0.0006
+160.39.140.230 - - [04/Apr/2017 20:52:32] "GET /views/text.html HTTP/1.1" 200 175 0.0011
+160.39.140.230 - - [04/Apr/2017 20:52:32] "GET /views/meter.html HTTP/1.1" 200 442 0.0007
+160.39.140.230 - - [04/Apr/2017 20:52:32] "GET /views/list.html HTTP/1.1" 200 493 0.0013
+160.39.140.230 - - [04/Apr/2017 20:52:32] "GET /views/number.html HTTP/1.1" 200 343 0.0007
+160.39.140.230 - - [04/Apr/2017 20:53:29] "GET /events HTTP/1.1" 200 - 131.9786
+160.39.140.230 - - [04/Apr/2017 20:53:29] "GET /events HTTP/1.1" 200 - 57.0681
+Waiting for 2 connection(s) to finish, can take up to 30 sec, CTRL+C to stop now
+Exiting!
