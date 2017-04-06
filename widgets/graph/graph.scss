@@ -3,9 +3,9 @@
 // ----------------------------------------------------------------------------
 $background-color:  #dc5945;
 
-$title-color:       rgba(255, 255, 255, 0.7);
+$title-color:       #dc5945;
 $moreinfo-color:    rgba(255, 255, 255, 0.3);
-$tick-color:        rgba(0, 0, 0, 0.4);
+$tick-color:        rgba(255, 255, 255, 0.4);
 
 
 // ----------------------------------------------------------------------------
@@ -26,8 +26,16 @@ $tick-color:        rgba(0, 0, 0, 0.4);
   }
 
   .title, .value {
+    //display: none;
+    position: relative;
+    color: $title-color;
+  }
+
+  .value {
+    display: none;
     position: relative;
     z-index: 99;
+    color: $title-color;
   }
 
   .title {

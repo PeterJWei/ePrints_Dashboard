@@ -1,4 +1,4 @@
-class Dashing.DoughnutChart extends Dashing.Widget
+class Dashing.BarChart extends Dashing.Widget
 
   ready: ->
     # Margins: zero if not set or the same as the opposite margin
@@ -26,7 +26,7 @@ class Dashing.DoughnutChart extends Dashing.Widget
     @ctx = $(@node).find('.chart-area')[0].getContext('2d')
 
     @myChart = new Chart(@ctx, {
-      type: 'doughnut'
+      type: 'bar'
       data: {
         labels: @get('labels')
         datasets: @get('datasets')
@@ -35,10 +35,7 @@ class Dashing.DoughnutChart extends Dashing.Widget
         responsive: true
         maintainAspectRatio: true
         legend: {
-          display: true,
-          labels: {
-            fontColor:"#fff"
-          }
+          display: true
         }
       }, @get('options'))
     });

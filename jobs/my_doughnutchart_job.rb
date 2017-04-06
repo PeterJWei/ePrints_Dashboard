@@ -7,7 +7,7 @@ require "json"
 url=URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/buildingFootprint/")
 
 
-labels = ['Lights', 'Electrical', 'HVAC']
+labels = ['Lights / ', 'Electrical / ', 'HVAC / ']
 
 SCHEDULER.every '10s', :first_in => 0 do |job|
   response = Net::HTTP.get_response(url)
@@ -16,6 +16,7 @@ SCHEDULER.every '10s', :first_in => 0 do |job|
   puts parsed["Light"]
   puts parsed["Electrical"]
   puts parsed["HVAC"]
+  labels = ['Lights / ' + parsed["Light"].to_s + ' W', 'Electrical / ' + parsed["Electrical"].to_s + ' W', 'HVAC / ' + parsed["HVAC"].to_s + ' W']
   data = [
     {
       # Create a random set of data for the chart

@@ -15,11 +15,15 @@ class Dashing.Graph extends Dashing.Widget
       element: @node
       width: width
       height: height
-      renderer: @get("graphtype")
+      renderer: 'area'
+      stroke: true
+      max: 40000
+      min: 0
       series: [
         {
-        color: "#fff",
+        color: "rgba(253, 180, 92, 0.5)",
         data: [{x:0, y:0}]
+        stroke: 'rgba(253, 180, 92, 1)'
         }
       ]
       padding: {top: 0.02, left: 0.02, right: 0.02, bottom: 0.02}
