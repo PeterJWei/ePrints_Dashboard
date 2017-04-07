@@ -8,7 +8,7 @@ url=URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/buildingFootprint
 
 # Populate the graph with some random points
 points = []
-(1..50).each do |i|
+(1..1000).each do |i|
   points << { x: i, y: rand(50) }
 end
 last_x = points.last[:x]
