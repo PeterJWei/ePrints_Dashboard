@@ -37,14 +37,14 @@ class Dashing.GoogleLine extends Dashing.Widget
        textStyle:{color: '#fff'}
        gridlines: {
        count:-1
-       color:'#303030'
+       color:'#000'
        }
       }
       hAxis: {
         textStyle:{color: '#fff'}
         gridlines: {
         count:-1
-        color:'#303030'
+        color:'#000'
         }
       }
       
