@@ -20,11 +20,14 @@ class Dashing.GoogleLine extends Dashing.Widget
     @options =
       height: height
       width: width
+      #isStacked: 'true'
       colors: colors
       backgroundColor:
         fill:'transparent'
-      legend:
+      legend: {
         position: @get('legend_position')
+        textStyle: {color: '#fff'}
+      }
       animation:
         duration: 500,
         easing: 'out'

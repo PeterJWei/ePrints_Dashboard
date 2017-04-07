@@ -23,9 +23,9 @@ SCHEDULER.every '10s', :first_in => 0 do |job|
       #data: Array.new(3) { rand(30) },
       data: [parsed["Light"], parsed["Electrical"], parsed["HVAC"]],
       backgroundColor: [
-        '#F7464A', #F7464A
-        '#60BD68', #60BD68
-        '#CAF270', #CAF270
+        '#F73F52', #F7464A
+        '#F6F6F6', #60BD68
+        '#FFEA85', #CAF270
       ],
       hoverBackgroundColor: [
         '#FF6384',
