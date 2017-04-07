@@ -28,4 +28,6 @@ SCHEDULER.every '2s' do
 	data << dataPoint
 	#puts data[0]
 	send_event('mychart', points: data)
+	#send_event('testchart', points: data)
+	#send_event('testchart', points2: data)
 end
