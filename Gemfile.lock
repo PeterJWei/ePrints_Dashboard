@@ -28,6 +28,8 @@ GEM
     execjs (2.0.2)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
+    haml (4.0.7)
+      tilt
     hike (1.2.3)
     http (2.2.1)
       addressable (~> 2.3)
@@ -97,6 +99,7 @@ PLATFORMS
 
 DEPENDENCIES
   dashing
+  haml
   twitter (>= 5.9.0)
 
 BUNDLED WITH
