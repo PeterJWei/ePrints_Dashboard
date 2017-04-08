@@ -20,7 +20,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     if @get('colors')
       colors = @get('colors').split(/\s*,\s*/)
 
-    @chart = new google.visualization.LineChart($(@node).find(".chart")[0])
+    @chart = new google.visualization.AreaChart($(@node).find(".chart")[0])
     @options =
       height: height
       width: width
@@ -39,6 +39,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
        format: @get('vaxis_format')
        curveType: @get('curve_type')
        textStyle:{color: '#fff'}
+       viewWindowMode: 'pretty'
        gridlines: {
        count:-1
        color:'#303030'
@@ -66,7 +67,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
 
 	
 
-    @chart2 = new google.visualization.LineChart($(@node).find(".chart2")[0])
+    @chart2 = new google.visualization.AreaChart($(@node).find(".chart2")[0])
     @options2 =
       height: height
       width: width
@@ -85,6 +86,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
        format: @get('vaxis_format')
        curveType: @get('curve_type')
        textStyle:{color: '#fff'}
+       viewWindowMode: 'pretty'
        gridlines: {
        count:-1
        color:'#303030'

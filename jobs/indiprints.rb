@@ -13,7 +13,7 @@ data2 = [['Time', 'Peter']]
 	data2 << [i, 0]
 end
 x = data1.last[0]
-
+x2 = data2.last[0]
 SCHEDULER.every '2s' do
 	response1 = Net::HTTP.get_response(url1)
 	response2 = Net::HTTP.get_response(url2)
@@ -22,8 +22,9 @@ SCHEDULER.every '2s' do
 	puts "rishi", parsed1
 	puts "peter", parsed2
 	x += 1
+	x2 += 1
 	dataPoint1 = [x, parsed1["value"]]
-	dataPoint2 = [x, parsed2["value"]]
+	dataPoint2 = [x2, parsed2["value"]]
 	data1.shift
 	data2.shift
 	data1[0] = ['Time', 'Rishi']

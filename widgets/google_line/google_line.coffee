@@ -20,7 +20,7 @@ class Dashing.GoogleLine extends Dashing.Widget
     @options =
       height: height
       width: width
-      #isStacked: 'true'
+      #isStacked: 'relative'
       colors: colors
       backgroundColor:
         fill:'transparent'
@@ -35,6 +35,7 @@ class Dashing.GoogleLine extends Dashing.Widget
        format: @get('vaxis_format')
        curveType: @get('curve_type')
        textStyle:{color: '#fff'}
+       viewWindowMode: 'pretty'
        gridlines: {
        count:-1
        color:'#000'
