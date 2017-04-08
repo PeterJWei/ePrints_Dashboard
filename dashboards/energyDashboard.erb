@@ -4,7 +4,7 @@
 $(function() {
   // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
   // Dashing.gridsterLayout('[{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":2,"row":1},{"col":2,"row":2},{"col":2,"row":3}]')
-  Dashing.gridsterLayout('[{"col":1,"row":1}, {"col":2, "row":1},{"col":3,"row":1},{"col":1,"row":2},{"col":3,"row":2}]')
+  Dashing.gridsterLayout('[{"col":1,"row":1}, {"col":2, "row":1},{"col":3,"row":1},{"col":1,"row":2},{"col":3,"row":2},{"col":1,"row":3},{"col":2,"row":3}]')
   Dashing.widget_base_dimensions = [370, 340]
   Dashing.numColumns = 5
 });
@@ -22,7 +22,7 @@ $(function() {
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-id="karma" data-view="Number" data-title="Energy Bill for today" data-prefix="$" style="background-color:#303030;"></div>
-      <i class="fa fa-money icon-background"></i>
+      <i class="fa fa-flash icon-background"></i>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
@@ -59,6 +59,13 @@ $(function() {
     </li>
     <li data-row="2" data-col="3" data-sizex="3" data-sizey="2">
       <div data-id="testchart" data-colors="#2BE5A6" data-ocolor="#0D625E" data-view="GoogleMultiline" data-vAxis_gridlines_color='#000' data-legend_position="right" data-vaxis_format="" data-curve_type="function" data-title="Individual Footprints - Ranked by Consumption" style="background-color:#303030"></div>
+    </li>
+
+    <li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="fitbit_leaderboard" data-view="FitbitLeaderboard"></div>
+    </li>
+    <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+      <div data-view="Countdown" data-title="New Widget" data-end="10-Apr-2017 18:00:00"></div>
     </li>
 
     <!-- <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
