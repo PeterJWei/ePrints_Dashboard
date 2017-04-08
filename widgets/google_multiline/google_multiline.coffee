@@ -20,7 +20,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     if @get('colors')
       colors = @get('colors').split(/\s*,\s*/)
 
-    @chart = new google.visualization.AreaChart($(@node).find(".chart")[0])
+    @chart = new google.visualization.LineChart($(@node).find(".chart")[0])
     @options =
       height: height
       width: width
@@ -60,12 +60,18 @@ class Dashing.GoogleMultiline extends Dashing.Widget
 
     @chart.draw @data, @options
 
-    @chart2 = new google.visualization.AreaChart($(@node).find(".chart2")[0])
-    @options =
+    ocolor = null
+    if @get('ocolor')
+      ocolor = @get('ocolor').split(/\s*,\s*/)
+
+	
+
+    @chart2 = new google.visualization.LineChart($(@node).find(".chart2")[0])
+    @options2 =
       height: height
       width: width
       #isStacked: 'true'
-      colors: colors
+      colors: ocolor
       backgroundColor:
         fill:'transparent'
       legend: {
@@ -98,7 +104,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     else
       @data = google.visualization.arrayToDataTable []
 
-    @chart2.draw @data, @options
+    @chart2.draw @data, @options2
 
 
 
@@ -111,4 +117,4 @@ class Dashing.GoogleMultiline extends Dashing.Widget
 
     if @chart2
       @data = google.visualization.arrayToDataTable data.points2
-      @chart2.draw @data, @options
+      @chart2.draw @data, @options2

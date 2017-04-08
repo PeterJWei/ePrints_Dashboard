@@ -5,8 +5,8 @@ require "json"
 url1 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=785883b2274c4519")
 url2 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=9432F0A3-660D-4C35-AA63-C7CFDD6D0F4D")
 
-data1 = [['Time', 'Energy']]
-data2 = [['Time', 'Energy']]
+data1 = [['Time', 'Rishi']]
+data2 = [['Time', 'Peter']]
 
 (1..500).each do |i|
 	data1 << [i, 0]
@@ -26,8 +26,8 @@ SCHEDULER.every '2s' do
 	dataPoint2 = [x, parsed2["value"]]
 	data1.shift
 	data2.shift
-	data1[0] = ['Time', 'Energy']
-	data2[0] = ['Time', 'Energy']
+	data1[0] = ['Time', 'Rishi']
+	data2[0] = ['Time', 'Peter']
 
 	data1 << dataPoint1
 	data2 << dataPoint2
