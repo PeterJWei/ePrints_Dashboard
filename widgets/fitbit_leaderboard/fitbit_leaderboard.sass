@@ -1,5 +1,5 @@
-$background-color: #15aaaa
-$highlight: #5ac7c8
+$background-color: #303030
+$highlight: #EC625F
 
 .widget-fitbit-leaderboard
   position: relative
@@ -11,8 +11,8 @@ $highlight: #5ac7c8
     left: 0
     width: 100%
     height: 100px
-    background-image: url("fitbit/Banner.png")
-    background-position: center 50px
+    background-image: url("fitbit/leader.png")
+    background-position: center 30px
     background-repeat: no-repeat
     background-size: 50%
 
@@ -26,10 +26,11 @@ $highlight: #5ac7c8
     text-transform: none
 
   h3
+    color: #FAFB97
     text-transform: uppercase
     font-size: 10px
     letter-spacing: 2px
-    margin: 58px 0 10px
+    margin: 48px 0 15px
 
   #data
     display: none
@@ -73,11 +74,12 @@ $highlight: #5ac7c8
           width: 140px
           font-size: 14px
           text-align: left
-          color: lighten($highlight, 20%)
+          color: lighten($highlight, 0%)
 
         .steps
           font-size: 12px
           text-align: left
+          color: lighten($highlight, 20%)
 
         &.me
           background-color: darken($background-color, 2%)
