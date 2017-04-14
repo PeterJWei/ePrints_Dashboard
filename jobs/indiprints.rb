@@ -3,11 +3,12 @@ require "uri"
 require "json"
 
 url1 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=785883b2274c4519")
-url2 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=9432F0A3-660D-4C35-AA63-C7CFDD6D0F4D")
+#url2 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=9432F0A3-660D-4C35-AA63-C7CFDD6D0F4D")
+url2 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=77f93cfd3f2d720a")
 url3 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=eac6547d7ee7b9f")
 
 data1 = [['Time', 'Rishikanth']]
-data2 = [['Time', 'Peter']]
+data2 = [['Time', 'Fred Jiang']]
 data3 = [['time', 'Stephen']]
 
 (1..500).each do |i|
@@ -18,7 +19,7 @@ data3 = [['time', 'Stephen']]
 end
 
 x = data1.last[0]
-names = ['Rishi', 'Peter', 'Stephen']
+names = ['Rishi', 'Fred Jiang', 'Stephen']
 
 SCHEDULER.every '2s' do
 	response1 = Net::HTTP.get_response(url1)

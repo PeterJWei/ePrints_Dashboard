@@ -20,9 +20,11 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     if @get('colors')
       colors = @get('colors').split(/\s*,\s*/)
 
-    title1 = ""
-    if @get('title1')
-      title1 = @get('title1')
+    
+    #if @get('title1')
+    title1 = @get('title1')
+    title2 = @get('title2')
+    title3 = @get('title3')
 
     @chart = new google.visualization.AreaChart($(@node).find(".chart")[0])
     @options =
@@ -75,9 +77,9 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     if @get('ocolor')
       ocolor = @get('ocolor').split(/\s*,\s*/)
 
-    title2 = ""
-    if @get('title2')
-      title2 = @get('title2')
+    #title2 = ""
+    #if @get('title2')
+    #  title2 = @get('title2')
 
 
 
@@ -129,9 +131,9 @@ class Dashing.GoogleMultiline extends Dashing.Widget
 
     @chart2.draw @data, @options2
 
-    title3 = ""
-    if @get('title3')
-      title3 = @get('title3')
+    #title3 = ""
+    #if @get('title3')
+    #  title3 = @get('title3')
 
 
 
@@ -189,14 +191,17 @@ class Dashing.GoogleMultiline extends Dashing.Widget
   onData: (data) ->
     if @chart
       @data = google.visualization.arrayToDataTable data.points
+      @options.title = data.title1
       @chart.draw @data, @options
 
     if @chart2
       @data = google.visualization.arrayToDataTable data.points2
+      @options2.title = data.title2
       @chart2.draw @data, @options2
 
     if @chart3
       @data = google.visualization.arrayToDataTable data.points3
+      @options3.title = data.title3
       @chart3.draw @data, @options3
 
 
