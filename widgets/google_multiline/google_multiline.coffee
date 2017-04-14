@@ -27,6 +27,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     @chart = new google.visualization.AreaChart($(@node).find(".chart")[0])
     @options =
       title: title1
+      titleTextStyle: {color:'#F7F09B'}
       height: height
       width: width
       isStacked: 'true'
@@ -79,6 +80,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     @chart2 = new google.visualization.AreaChart($(@node).find(".chart2")[0])
     @options2 =
       title: title2
+      titleTextStyle: {color:'#F7F09B'}
       height: height
       width: width
       isStacked: 'true'
@@ -127,6 +129,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     @chart3 = new google.visualization.AreaChart($(@node).find(".chart3")[0])
     @options3 =
       title: title3
+      titleTextStyle: {color:'#F7F09B'}
       height: height
       width: width
       isStacked: 'true'

@@ -6,7 +6,7 @@ url1 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=785883b227
 url2 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=9432F0A3-660D-4C35-AA63-C7CFDD6D0F4D")
 url3 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=eac6547d7ee7b9f")
 
-data1 = [['Time', 'Rishi']]
+data1 = [['Time', 'Rishikanth']]
 data2 = [['Time', 'Peter']]
 data3 = [['time', 'Stephen']]
 
@@ -35,17 +35,17 @@ SCHEDULER.every '2s' do
 	#x += 1
 	#scaledTime = Time.at(x).utc.strftime("%H:%M:%S")
 	h, m, s = Time.now.strftime("%H:%M:%S").split(":").map(&:to_i)
-	dataPoint1 = [[h, m, s], parsed1["HVAC"], parsed1["Light"], parsed1["Electrical"]]
-	dataPoint2 = [[h, m, s], parsed2["HVAC"], parsed2["Light"], parsed2["Electrical"]]
-	dataPoint3 = [[h, m, s], parsed3["HVAC"], parsed3["Light"], parsed3["Electrical"]]
+	dataPoint1 = [[h, m, s], parsed1["HVAC"], parsed1["Plugs"], parsed1["Light"]]
+	dataPoint2 = [[h, m, s], parsed2["HVAC"], parsed2["Plugs"], parsed2["Light"]]
+	dataPoint3 = [[h, m, s], parsed3["HVAC"], parsed3["Plugs"], parsed3["Light"]]
 
 	data1.shift
 	data2.shift
 	data3.shift
 
-	data1[0] = ['Time', 'HVAC', 'Light', 'Electrical']
-	data2[0] = ['Time', 'HVAC', 'Light', 'Electrical']
-	data3[0] = ['Time', 'HVAC', 'Light', 'Electrical']
+	data1[0] = ['Time', 'HVAC', 'Plugs', 'Light']
+	data2[0] = ['Time', 'HVAC', 'Plugs', 'Light']
+	data3[0] = ['Time', 'HVAC', 'Plugs', 'Light']
 
 	data1 << dataPoint1
 	data2 << dataPoint2
@@ -79,7 +79,7 @@ SCHEDULER.every '2s' do
 		end
 	end
 
-	send_event('testchart', points: order[max], title1: names[max], points2: order[mid], title2: names[mid], points3: order[min], title3: names[min])
+	send_event('testchart', points: order[max], title1: "#1 "+names[max], points2: order[mid], title2: "#2 " + names[mid], points3: order[min], title3: "#3 " + names[min])
 
 	
 #	if parsed2["value"] > parsed1["value"] 

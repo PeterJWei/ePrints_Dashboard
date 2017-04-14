@@ -4,7 +4,7 @@
 $(function() {
   // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
   // Dashing.gridsterLayout('[{"col":1,"row":1},{"col":3,"row":1},{"col":2,"row":2},{"col":3,"row":2},{"col":1,"row":2},{"col":2,"row":1},{"col":2,"row":2},{"col":2,"row":3}]')
-  Dashing.gridsterLayout('[{"col":1,"row":1}, {"col":2, "row":1},{"col":3,"row":1},{"col":1,"row":2},{"col":3,"row":2}]')
+  Dashing.gridsterLayout('[{"col":1,"row":1}, {"col":2, "row":1},{"col":3,"row":1},{"col":1,"row":2},{"col":3,"row":2}, {"col":1, "row":3}]')
   Dashing.widget_base_dimensions = [370, 340]
   Dashing.numColumns = 5
 });
@@ -30,42 +30,20 @@ $(function() {
     </li>
     
     <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
-      <div data-id="mychart" data-colors="#2185D5, #2BE5A6, #FF7844" data-view="GoogleLine" data-vAxis_gridlines_color='#000' data-legend_position="right" data-vaxis_format="" data-curve_type="function" data-title="Realtime Energy Footprint" style="background-color:#303030"></div>
+      <div data-id="mychart" data-colors="#2185D5, #2BE5A6, #FF7844" data-view="GoogleLine" data-vAxis_gridlines_color='#000' data-legend_position="right" data-vaxis_format="" data-curve_type="function" data-title="Realtime Energy usage for 10 & 10M floors" style="background-color:#303030"></div>
     </li>
 
-    <!-- <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
-    <div data-id="convergence" data-view="Graph" data-title="" data-suffix="W" style="background-color:#303030;"></div>
-    </li> -->
-
-    <!-- <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="synergy" data-view="Meter" data-title="Synergy" data-min="0" data-max="100"></div>
-    </li>
-
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="synergy" data-view="Meter" data-moreinfo="In sync with my neighbour!" data-title="Synergy" data-min="0" data-max="100"></div>
-    </li> -->
-
-    <!-- <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
-      <div data-id="buzzwords" data-view="List" data-unordered="true" data-title="Buzzwords" data-moreinfo="# of times said around the office"></div>
-    </li> -->
-
-    
-
-    <!-- <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
-      <div data-id="convergence" data-view="Graph" data-title="Convergence" style="background-color:#47bbb3;"></div>
-    </li> -->
-    <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
+       <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
       <div data-id="barchart" data-view ="BarChart" data-title="Energy Usage for the Week" data-moreinfo=""></div>
     </li>
     <li data-row="2" data-col="3" data-sizex="3" data-sizey="2">
       <div data-id="testchart" data-colors="#2BE5A6, #FFF46E, #2772DB" data-view="GoogleMultiline" data-vAxis_gridlines_color='#000' data-legend_position="right" data-vaxis_format="" data-curve_type="function" data-title="Individual Footprints - Ranked by Consumption" style="background-color:#303030"></div>
     </li>
 
-    <!-- <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div data-id="twitter_mentions" data-view="Comments" style="background-color:#ff9618;" data-moreinfo="Tweets tagged with #todayilearned"></div>
-      <i class="fa fa-twitter icon-background"></i>
-    </li> -->
-
+    <!-- <li data-row="3" data-col="1" data-sizex="2" data-sizey="1">
+       <div data-id="weekchart" data-colors="#2BE5A6" data-view="GoogleLine" data-legend_position="none" data-vaxis_format="" data-curve_type="function" data-title="Energy Usage over the week" style="background-color:#303030"></div>
+     </li> -->
+   
   </ul>
   <!-- <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center> -->
 </div>
