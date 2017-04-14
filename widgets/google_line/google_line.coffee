@@ -47,6 +47,10 @@ class Dashing.GoogleLine extends Dashing.Widget
         count:-1
         color:'#000'
         }
+        minorGridlines: {
+        count: 0
+        color: '#303030'
+        }
       }
       
 

@@ -43,9 +43,9 @@ SCHEDULER.every '2s' do
 	data2.shift
 	data3.shift
 
-	data1[0] = ['Time', 'HVAC', 'Plugs', 'Light']
-	data2[0] = ['Time', 'HVAC', 'Plugs', 'Light']
-	data3[0] = ['Time', 'HVAC', 'Plugs', 'Light']
+	data1[0] = ['Time', 'HVAC', 'Plug Loads', 'Light']
+	data2[0] = ['Time', 'HVAC', 'Plugs Loads', 'Light']
+	data3[0] = ['Time', 'HVAC', 'Plugs Loads', 'Light']
 
 	data1 << dataPoint1
 	data2 << dataPoint2

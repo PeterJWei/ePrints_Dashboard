@@ -1,10 +1,11 @@
 <h1 class="title" data-bind="title"></h1>
 
-<h2 class="value" data-bind="current | shortenedNumber | prepend prefix | append suffix"></h2>
+<h2 class="value" data-bind="current | shortenedNumber | prepend prefix | append suffix"><i data-bind-class="arrow"></i>
+</h2>
 
 <p class="change-rate">
-  <i data-bind-class="arrow"></i><span data-bind="difference"></span>
-</p>
+  <p>Yesterday this Time</p>
+  <span data-bind="difference | prepend prefix"></span> </p>
 
 <p class="more-info" data-bind="moreinfo"></p>
 

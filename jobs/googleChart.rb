@@ -32,7 +32,7 @@ SCHEDULER.every '2s' do
 	#h = (h - 4) % 24
 	dataPoint = [[h, m, s], parsed["HVAC"], parsed["Light"], parsed["Electrical"]]
 	data.shift
-	data[0] = ['Time', 'HVAC', 'Lights', 'Plugs']
+	data[0] = ['Time', 'HVAC', 'Lights', 'Plug Loads']
 	data << dataPoint
 	#puts data[0]
 	send_event('mychart', points: data)

@@ -57,6 +57,10 @@ class Dashing.GoogleMultiline extends Dashing.Widget
         count:-1
         color:'#303030'
         }
+        minorGridlines: {
+        count:0
+        color: '#303030'
+        }
       }
       
 
@@ -110,6 +114,11 @@ class Dashing.GoogleMultiline extends Dashing.Widget
         count:-1
         color:'#303030'
         }
+        minorGridlines: {
+        count:0
+        color: '#303030'
+        }
+
       }
       
 
@@ -159,6 +168,11 @@ class Dashing.GoogleMultiline extends Dashing.Widget
         count:-1
         color:'#303030'
         }
+        minorGridlines: {
+        count:0
+        color: '#303030'
+        }
+
       }
       
 

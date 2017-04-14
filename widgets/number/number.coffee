@@ -6,8 +6,9 @@ class Dashing.Number extends Dashing.Widget
       last = parseInt(@get('last'))
       current = parseInt(@get('current'))
       if last != 0
-        diff = Math.abs(Math.round((current - last) / last * 100))
-        "#{diff}%"
+        #diff = Math.abs(Math.round((current - last) / last * 100))
+        diff = last
+        "#{diff}"
     else
       ""
 
