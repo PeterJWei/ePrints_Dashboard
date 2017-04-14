@@ -1,6 +1,7 @@
 require "net/http"
 require "uri"
 require "json"
+require "time"
 
 url = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/buildingFootprint/")
 
@@ -12,17 +13,22 @@ url = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/buildingFootpri
 #	['4', 1030, 540]
 #])
 
-data = [['Time', 'Energy', 'Lights', 'HVAC'], [0, 20]]
+data = [['Time', 'Energy', 'Lights', 'HVAC'], [0, 0, 0, 0]]
+
 
 (1..500).each do |i|
-	data << [i, 0, 0, 0] 
+	h, m, s = Time.at(i).utc.strftime("%H:%M:%S").split(":").map(&:to_i)
+	data << [[h, m , s], 0, 0, 0]
 end
-x = data.last[0]
+#x = data.last[0]
+x = 500
 SCHEDULER.every '2s' do
 	response = Net::HTTP.get_response(url)
 	parsed = JSON.parse(response.body)
-	x += 1
-	dataPoint = [x, parsed["HVAC"], parsed["Light"], parsed["Electrical"]]
+	x += 2
+	timeval = Time.at(x).utc.strftime("%H:%M:%S")
+	h, m, s = Time.at(x).utc.strftime("%H:%M:%S").split(":").map(&:to_i)
+	dataPoint = [[h, m, s], parsed["HVAC"], parsed["Light"], parsed["Electrical"]]
 	data.shift
 	data[0] = ['Time', 'HVAC', 'Lights', 'Plugs']
 	data << dataPoint
