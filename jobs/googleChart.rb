@@ -17,8 +17,9 @@ data = [['Time', 'Energy', 'Lights', 'HVAC'], [0, 0, 0, 0]]
 
 
 (1..500).each do |i|
-	h, m, s = Time.at(i).utc.strftime("%H:%M:%S").split(":").map(&:to_i)
-	data << [[h, m , s], 0, 0, 0]
+	h, m, s = Time.now.strftime("%H:%M:%S").split(":").map(&:to_i)
+	#h = (h - 4) % 24
+	data << [[h, m, s], 0, 0, 0]
 end
 #x = data.last[0]
 x = 500
@@ -27,7 +28,8 @@ SCHEDULER.every '2s' do
 	parsed = JSON.parse(response.body)
 	x += 2
 	timeval = Time.at(x).utc.strftime("%H:%M:%S")
-	h, m, s = Time.at(x).utc.strftime("%H:%M:%S").split(":").map(&:to_i)
+	h, m, s = Time.now.strftime("%H:%M:%S").split(":").map(&:to_i)
+	#h = (h - 4) % 24
 	dataPoint = [[h, m, s], parsed["HVAC"], parsed["Light"], parsed["Electrical"]]
 	data.shift
 	data[0] = ['Time', 'HVAC', 'Lights', 'Plugs']
