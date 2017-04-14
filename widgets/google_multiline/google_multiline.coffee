@@ -20,8 +20,13 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     if @get('colors')
       colors = @get('colors').split(/\s*,\s*/)
 
+    title1 = ""
+    if @get('title1')
+      title1 = @get('title1')
+
     @chart = new google.visualization.AreaChart($(@node).find(".chart")[0])
     @options =
+      title: title1
       height: height
       width: width
       isStacked: 'true'
@@ -65,10 +70,15 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     if @get('ocolor')
       ocolor = @get('ocolor').split(/\s*,\s*/)
 
-	
+    title2 = ""
+    if @get('title2')
+      title2 = @get('title2')
+
+
 
     @chart2 = new google.visualization.AreaChart($(@node).find(".chart2")[0])
     @options2 =
+      title: title2
       height: height
       width: width
       isStacked: 'true'
@@ -108,9 +118,15 @@ class Dashing.GoogleMultiline extends Dashing.Widget
 
     @chart2.draw @data, @options2
 
+    title3 = ""
+    if @get('title3')
+      title3 = @get('title3')
+
+
 
     @chart3 = new google.visualization.AreaChart($(@node).find(".chart3")[0])
     @options3 =
+      title: title3
       height: height
       width: width
       isStacked: 'true'

@@ -18,6 +18,7 @@ data3 = [['time', 'Stephen']]
 end
 
 x = data1.last[0]
+names = ['Rishi', 'Peter', 'Stephen']
 
 SCHEDULER.every '2s' do
 	response1 = Net::HTTP.get_response(url1)
@@ -78,7 +79,7 @@ SCHEDULER.every '2s' do
 		end
 	end
 
-	send_event('testchart', points: order[max], points2: order[mid], points3: order[min])
+	send_event('testchart', points: order[max], title1: names[max], points2: order[mid], title2: names[mid], points3: order[min], title3: names[min])
 
 	
 #	if parsed2["value"] > parsed1["value"] 
