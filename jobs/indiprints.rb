@@ -35,9 +35,9 @@ SCHEDULER.every '2s' do
 	#x += 1
 	#scaledTime = Time.at(x).utc.strftime("%H:%M:%S")
 	h, m, s = Time.now.strftime("%H:%M:%S").split(":").map(&:to_i)
-	dataPoint1 = [[h, m, s], parsed1["HVAC"], parsed1["Plugs"], parsed1["Light"]]
-	dataPoint2 = [[h, m, s], parsed2["HVAC"], parsed2["Plugs"], parsed2["Light"]]
-	dataPoint3 = [[h, m, s], parsed3["HVAC"], parsed3["Plugs"], parsed3["Light"]]
+	dataPoint1 = [[h, m, s], parsed1["HVAC"].to_i, parsed1["Plugs"].to_i, parsed1["Light"].to_i]
+	dataPoint2 = [[h, m, s], parsed2["HVAC"].to_i, parsed2["Plugs"].to_i, parsed2["Light"].to_i]
+	dataPoint3 = [[h, m, s], parsed3["HVAC"].to_i, parsed3["Plugs"].to_i, parsed3["Light"].to_i]
 
 	data1.shift
 	data2.shift
