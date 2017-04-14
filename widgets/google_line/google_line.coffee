@@ -20,7 +20,7 @@ class Dashing.GoogleLine extends Dashing.Widget
     @options =
       height: height
       width: width
-      #isStacked: 'relative'
+      isStacked: 'true'
       colors: colors
       backgroundColor:
         fill:'transparent'

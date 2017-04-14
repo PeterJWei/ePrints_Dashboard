@@ -22,13 +22,13 @@ SCHEDULER.every '2s' do
   response = Net::HTTP.get_response(url)
   parsed = JSON.parse(response.body)
   current_energy = (parsed["energy"] * 0.19 / 1000).round
-  puts current_energy
+  #puts current_energy
   if current_energy != last_energy 
     send_event('karma', { current: current_energy, last: last_energy })
     puts "not equal"
   end
-  send_event('valuation', { current: current_valuation, last: last_valuation })
+ # send_event('valuation', { current: current_valuation, last: last_valuation })
   # send_event('karma', { current: current_karma, last: last_karma })
   
-  send_event('synergy',   { value: rand(100) })
+#  send_event('synergy',   { value: rand(100) })
 end

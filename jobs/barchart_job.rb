@@ -25,7 +25,7 @@ SCHEDULER.every '300s' do
   	data_array = parsed["history"]
   	data_array << parsed["energy"]
   	labels = parsed["historyStrings"]
-  	puts labels
+#  	puts labels
 	data = [
   	{
     	label: 'Energy (Watt Hour)',

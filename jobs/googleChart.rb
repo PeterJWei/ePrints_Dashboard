@@ -22,9 +22,9 @@ SCHEDULER.every '2s' do
 	response = Net::HTTP.get_response(url)
 	parsed = JSON.parse(response.body)
 	x += 1
-	dataPoint = [x, parsed["Electrical"], parsed["Light"], parsed["HVAC"]]
+	dataPoint = [x, parsed["HVAC"], parsed["Light"], parsed["Electrical"]]
 	data.shift
-	data[0] = ['Time', 'Energy', 'Lights', 'HVAC']
+	data[0] = ['Time', 'HVAC', 'Lights', 'Plugs']
 	data << dataPoint
 	#puts data[0]
 	send_event('mychart', points: data)

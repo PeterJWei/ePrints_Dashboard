@@ -32,17 +32,17 @@ SCHEDULER.every '2s' do
 
 	x += 1
 	scaledTime = Time.at(x).utc.strftime("%H:%M:%S")
-	dataPoint1 = [x, parsed1["Electrical"], parsed1["Light"], parsed1["HVAC"]]
-	dataPoint2 = [x, parsed2["Electrical"], parsed2["Light"], parsed2["HVAC"]]
-	dataPoint3 = [x, parsed3["Electrical"], parsed3["light"], parsed3["HVAC"]]
+	dataPoint1 = [x, parsed1["HVAC"], parsed1["Light"], parsed1["Electrical"]]
+	dataPoint2 = [x, parsed2["HVAC"], parsed2["Light"], parsed2["Electrical"]]
+	dataPoint3 = [x, parsed3["HVAC"], parsed3["Light"], parsed3["Electrical"]]
 
 	data1.shift
 	data2.shift
 	data3.shift
 
-	data1[0] = ['Time', 'Electrical', 'Light', 'HVAC']
-	data2[0] = ['Time', 'Electrical', 'Light', 'HVAC']
-	data3[0] = ['Time', 'Electrical', 'Light', 'HVAC']
+	data1[0] = ['Time', 'HVAC', 'Light', 'Electrical']
+	data2[0] = ['Time', 'HVAC', 'Light', 'Electrical']
+	data3[0] = ['Time', 'HVAC', 'Light', 'Electrical']
 
 	data1 << dataPoint1
 	data2 << dataPoint2

@@ -16,7 +16,7 @@ last_x = points.last[:x]
 SCHEDULER.every '2s' do
   response = Net::HTTP.get_response(url)
   parsed = JSON.parse(response.body)
-  puts parsed["value"]
+#  puts parsed["value"]
   points.shift
   last_x += 1
   points << { x: last_x, y: parsed["value"] }

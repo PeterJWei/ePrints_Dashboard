@@ -24,7 +24,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     @options =
       height: height
       width: width
-      #isStacked: 'true'
+      isStacked: 'true'
       colors: colors
       backgroundColor:
         fill:'transparent'
@@ -71,7 +71,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     @options2 =
       height: height
       width: width
-      #isStacked: 'true'
+      isStacked: 'true'
       colors: colors 
       backgroundColor:
         fill:'transparent'
@@ -113,7 +113,7 @@ class Dashing.GoogleMultiline extends Dashing.Widget
     @options3 =
       height: height
       width: width
-      #isStacked: 'true'
+      isStacked: 'true'
       colors: colors 
       backgroundColor:
         fill:'transparent'
