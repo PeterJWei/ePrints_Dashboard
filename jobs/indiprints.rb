@@ -11,9 +11,10 @@ data2 = [['Time', 'Peter']]
 data3 = [['time', 'Stephen']]
 
 (1..500).each do |i|
-	data1 << [i, 0, 0, 0]
-	data2 << [i, 0, 0, 0]
-	data3 << [i, 0, 0, 0]
+	h, m, s = Time.now.strftime("%H:%M:%S").split(":").map(&:to_i)
+	data1 << [[h, m, s], 0, 0, 0]
+	data2 << [[h, m, s], 0, 0, 0]
+	data3 << [[h, m, s], 0, 0, 0]
 end
 
 x = data1.last[0]
@@ -30,11 +31,12 @@ SCHEDULER.every '2s' do
 #	puts "rishi", parsed1
 #	puts "peter", parsed2
 
-	x += 1
-	scaledTime = Time.at(x).utc.strftime("%H:%M:%S")
-	dataPoint1 = [x, parsed1["HVAC"], parsed1["Light"], parsed1["Electrical"]]
-	dataPoint2 = [x, parsed2["HVAC"], parsed2["Light"], parsed2["Electrical"]]
-	dataPoint3 = [x, parsed3["HVAC"], parsed3["Light"], parsed3["Electrical"]]
+	#x += 1
+	#scaledTime = Time.at(x).utc.strftime("%H:%M:%S")
+	h, m, s = Time.now.strftime("%H:%M:%S").split(":").map(&:to_i)
+	dataPoint1 = [[h, m, s], parsed1["HVAC"], parsed1["Light"], parsed1["Electrical"]]
+	dataPoint2 = [[h, m, s], parsed2["HVAC"], parsed2["Light"], parsed2["Electrical"]]
+	dataPoint3 = [[h, m, s], parsed3["HVAC"], parsed3["Light"], parsed3["Electrical"]]
 
 	data1.shift
 	data2.shift
