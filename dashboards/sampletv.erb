@@ -1,4 +1,4 @@
-<img src="/assets/Banner1.png" width="2500">
+<img src="/assets/Banner2.png" width="2500">
 
 <script type='text/javascript'>
 $(function() {
@@ -9,7 +9,7 @@ $(function() {
   Dashing.numColumns = 5
 });
 </script> 
-<meta http-equiv=”refresh” content=”5" >
+<meta http-equiv=”refresh” content=”300" >
 
 <% content_for :title do %>Energy Dashboard<% end %>
 <div data-id="fullscreen" data-view="Fullscreen"></div>
@@ -30,7 +30,7 @@ $(function() {
     </li>
     
     <li data-row="1" data-col="1" data-sizex="3" data-sizey="1">
-      <div data-id="mychart" data-colors="#2185D5, #2BE5A6, #FF7844" data-view="GoogleLine" data-vAxis_gridlines_color='#000' data-legend_position="right" data-vaxis_format="" data-curve_type="function" data-title="Realtime Energy usage for 10 & 10M floors" style="background-color:#303030"></div>
+      <div data-id="mychart" data-colors="#2185D5, #2BE5A6, #FF7844" data-view="GoogleLine" data-vAxis_gridlines_color='#000' data-legend_position="right" data-vaxis_format="" data-curve_type="function" data-title="Realtime Power Consumption of 10 & 10M floors" style="background-color:#303030"></div>
     </li>
 
        <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
@@ -40,9 +40,9 @@ $(function() {
       <div data-id="testchart" data-colors="#2BE5A6, #FFF46E, #2772DB" data-view="GoogleMultiline" data-vAxis_gridlines_color='#000' data-legend_position="right" data-vaxis_format="" data-curve_type="function" data-title="Individual Footprints - Ranked by Consumption" style="background-color:#303030"></div>
     </li>
 
-    <!-- <li data-row="3" data-col="1" data-sizex="2" data-sizey="1">
+    <li data-row="3" data-col="1" data-sizex="2" data-sizey="1">
        <div data-id="weekchart" data-colors="#2BE5A6" data-view="GoogleLine" data-legend_position="none" data-vaxis_format="" data-curve_type="function" data-title="Energy Usage over the week" style="background-color:#303030"></div>
-     </li> --
+     </li>
    
   </ul>
   <!-- <center><div style="font-size: 12px">Try this: curl -d '{ "auth_token": "YOUR_AUTH_TOKEN", "text": "Hey, Look what I can do!" }' \http://<%=request.host%>:<%=request.port%>/widgets/welcome</div></center> -->
