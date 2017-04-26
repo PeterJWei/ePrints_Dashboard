@@ -4,12 +4,14 @@ require "json"
 
 url1 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=785883b2274c4519")
 #url2 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=9432F0A3-660D-4C35-AA63-C7CFDD6D0F4D")
-url2 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=77f93cfd3f2d720a")
-url3 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=eac6547d7ee7b9f")
+url2 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=4ff7f3fa4e902151")
+#url3 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=eac6547d7ee7b9f")
+url3 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=9432F0A3-660D-4C35-AA63-C7CFDD6D0F4D")
+url2 = URI.parse("http://icsl.ee.columbia.edu:8000/api/appSupport/?id=4ff7f3fa4e902151")
 
 data1 = [['Time', 'Rishikanth']]
 data2 = [['Time', 'Fred Jiang']]
-data3 = [['time', 'Stephen']]
+data3 = [['time', 'Peter']]
 
 (1..500).each do |i|
 	h, m, s = Time.now.strftime("%H:%M:%S").split(":").map(&:to_i)
@@ -19,7 +21,7 @@ data3 = [['time', 'Stephen']]
 end
 
 x = data1.last[0]
-names = ['Rishi', 'Fred Jiang', 'Stephen']
+names = ['Rishi', 'Fred Jiang', 'Peter']
 
 SCHEDULER.every '2s' do
 	response1 = Net::HTTP.get_response(url1)
@@ -36,17 +38,17 @@ SCHEDULER.every '2s' do
 	#x += 1
 	#scaledTime = Time.at(x).utc.strftime("%H:%M:%S")
 	h, m, s = Time.now.strftime("%H:%M:%S").split(":").map(&:to_i)
-	dataPoint1 = [[h, m, s], parsed1["HVAC"].to_i, parsed1["Plugs"].to_i, parsed1["Light"].to_i]
-	dataPoint2 = [[h, m, s], parsed2["HVAC"].to_i, parsed2["Plugs"].to_i, parsed2["Light"].to_i]
-	dataPoint3 = [[h, m, s], parsed3["HVAC"].to_i, parsed3["Plugs"].to_i, parsed3["Light"].to_i]
+	dataPoint1 = [[h, m, s], parsed1["HVAC"].to_i, parsed1["Electrical"].to_i, parsed1["Light"].to_i]
+	dataPoint2 = [[h, m, s], parsed2["HVAC"].to_i, parsed2["Electrical"].to_i, parsed2["Light"].to_i]
+	dataPoint3 = [[h, m, s], parsed3["HVAC"].to_i, parsed3["Electrical"].to_i, parsed3["Light"].to_i]
 
 	data1.shift
 	data2.shift
 	data3.shift
 
 	data1[0] = ['Time', 'HVAC', 'Plug Loads', 'Light']
-	data2[0] = ['Time', 'HVAC', 'Plugs Loads', 'Light']
-	data3[0] = ['Time', 'HVAC', 'Plugs Loads', 'Light']
+	data2[0] = ['Time', 'HVAC', 'Plug Loads', 'Light']
+	data3[0] = ['Time', 'HVAC', 'Plug Loads', 'Light']
 
 	data1 << dataPoint1
 	data2 << dataPoint2
